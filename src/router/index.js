@@ -1,14 +1,15 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Dashboard from '../pages/Dashboard.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Dashboard from '../pages/Dashboard.vue';
 
-import Idx from '../components/idx/Index.vue'
-import Classification from '../components/idx/Classification.vue'
-import AboutMe from '../components/idx/AboutMe.vue'
-import Archive from '../components/idx/Archive.vue'
-import Tag from '../components/idx/Tag.vue'
+import Idx from '../components/idx/Index.vue';
+import Classification from '../components/idx/Classification.vue';
+import AboutMe from '../components/idx/AboutMe.vue';
+import Archive from '../components/idx/Archive.vue';
+import Tag from '../components/idx/Tag';
+import Detail from '../components/blog/Detail';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -20,6 +21,11 @@ export default new Router({
           name: 'index',
           path: '/',
           component: Idx
+        },
+        {
+          name: 'detail',
+          path: 'blog/:id',
+          component: Detail
         },
         {
           name: 'classification',
@@ -44,4 +50,4 @@ export default new Router({
       ]
     }
   ]
-})
+});
