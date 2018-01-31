@@ -17,10 +17,10 @@ export default {
   },
   computed: {
     Data() {
-      return this.$store.getters.getDatas;
+      return this.$store.getters.getBlogList;
     },
     Count() {
-      return this.$store.getters.getCount;
+      return this.$store.getters.getBLogCount;
     }
   },
   mounted() {

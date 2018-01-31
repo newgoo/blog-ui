@@ -15,5 +15,4 @@ export default {
 
 <style lang="scss">
 @import "./assets/stylesheets/main.scss";
-// @import url("//unpkg.com/iview/dist/styles/iview.css");
 </style>

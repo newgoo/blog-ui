@@ -2,8 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import actions from './actions';
 import getters from './getters';
-import {index} from './modules/index';
-import {blog} from './modules/blog';
+import { blog } from './modules/blog';
 
 Vue.use(Vuex);
 
@@ -22,7 +21,6 @@ export default new Vuex.Store({
   actions,
   getters,
   modules: {
-    index,
     blog
   }
 });

@@ -1,10 +1,5 @@
 <template>
 <div>
-  <!-- <div class="ct">
-    <h1>{{BlogDetail.title}}</h1>
-    <div>{{formateDate(blog.add_time)}}</div>
-    <vue-markdown :source="blog.content" style="v-highlight"></vue-markdown>
-  </div> -->
   <div style="background:#eee;padding: 20px">
     <Card :bordered="false" class="ct">
       <div slot="title" style="height:40px">
@@ -23,23 +18,12 @@
 
 <script>
 import VueMarkdown from 'vue-markdown';
-import {
-  dat
-} from '../../util/date';
+import { dat } from '../../util/date';
 
 export default {
   data() {
     return {
-      blog: {
-        id: 0,
-        title: '',
-        author: '',
-        add_time: 0,
-        content: '',
-        update_time: 0,
-        views: 0,
-        introduce: ''
-      }
+      blog: { id: 0, title: '', author: '', add_time: 0, content: '', update_time: 0, views: 0, introduce: '' }
     };
   },
   components: {
@@ -47,12 +31,12 @@ export default {
   },
   mounted() {
     this.$store.dispatch('SetOneBlog', this.$route.params.id);
-    this.blog = this.$store.getters.getData;
+    this.blog = this.$store.getters.getBlogDetail;
   },
   computed: {
     BlogDetail() {
-      this.blog = this.$store.getters.getData;
-      return this.$store.getters.getData;
+      this.blog = this.$store.getters.getBlogDetail;
+      return this.$store.getters.getBlogDetail;
     }
   },
   methods: {
