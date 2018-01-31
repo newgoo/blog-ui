@@ -1,9 +1,13 @@
 <template>
 <div class="bot">
   <div>
-
+    © 2018
+    <i class="fa fa-heart" aria-hidden="true"></i>
+    lives
   </div>
-  down
+  <div>
+    前端vue+后端beego
+  </div>
 </div>
 </template>
 
@@ -12,6 +16,6 @@
   margin-top: 50px;
   margin-bottom: 50px;
   text-align: center;
-  font-size: medium;
+  font-size: small;
 }
 </style>

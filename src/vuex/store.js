@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 import actions from './actions';
 import getters from './getters';
 import { blog } from './modules/blog';
+import { hot } from './modules/hot';
 
 Vue.use(Vuex);
 
@@ -21,6 +22,7 @@ export default new Vuex.Store({
   actions,
   getters,
   modules: {
-    blog
+    blog,
+    hot
   }
 });

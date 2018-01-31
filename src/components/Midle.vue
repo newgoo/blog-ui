@@ -1,8 +1,10 @@
 <template>
-  <Row>
-      <Col span="18"><router-view class="rtv"></router-view></Col>
-      <Col span="6"><hot class="ht"></hot></Col>
-  </Row>
+<Row>
+  <keep-alive>
+    <Col span="18"><router-view class="rtv"></router-view></Col>
+  </keep-alive>
+  <Col span="6"><hot class="ht"></hot></Col>
+</Row>
 </template>
 
 <script>
@@ -18,6 +20,7 @@ export default {
 #app {
   padding: 32px;
 }
+
 .rtv {
   /*height: 300px;*/
   margin-left: 50px;
@@ -25,6 +28,7 @@ export default {
   margin-right: 10px;
   background-color: aliceblue;
 }
+
 .ht {
   margin-left: 10px;
   margin-top: 30px;

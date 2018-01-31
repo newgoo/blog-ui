@@ -24,7 +24,7 @@ export default {
     }
   },
   mounted() {
-    this.$store.dispatch('GetBlogList').catch((error) => {
+    this.$store.dispatch('GetBlogListAPI').catch((error) => {
       console.error(error);
     });
   },

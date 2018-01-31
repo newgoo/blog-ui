@@ -44,7 +44,15 @@ export default {
       let dt = new Date(date * 1000);
       return dat(dt, 'yyyy-MM-dd hh:mm');
     }
+  },
+  watch: {
+    '$route'(to, from) {
+      this.$store.dispatch('SetOneBlog', to.params.id);
+    }
   }
+  // activated() {
+  //   this.$store.dispatch('SetOneBlog', this.$route.params.id);
+  // }
 };
 </script>
 
