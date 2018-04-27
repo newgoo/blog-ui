@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="blog in Data">
+    <div v-for="blog in Data" :key="blog.id">
       <blog-small :blog="blog"></blog-small>
     </div>
   </div>
@@ -10,11 +10,11 @@
 import BlogSmall from '../template/BlogSmall';
 
 export default {
-  data() {
-    return {
-      blog: { id: 0, title: '', author: '', add_time: 0, content: '', update_time: 0, views: 0, introduce: '' }
-    };
-  },
+  // data() {
+  //   return {
+  //     blog: { id: 0, title: '', author: '', add_time: 0, content: '', update_time: 0, views: 0, introduce: '' }
+  //   };
+  // },
   computed: {
     Data() {
       return this.$store.getters.getBlogList;
@@ -26,6 +26,7 @@ export default {
   mounted() {
     this.$store.dispatch('GetBlogListAPI').catch((error) => {
       console.error(error);
+      return error;
     });
   },
   components: {

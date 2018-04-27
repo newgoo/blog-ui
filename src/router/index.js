@@ -8,6 +8,7 @@ import AboutMe from '../components/idx/AboutMe.vue';
 import Archive from '../components/idx/Archive.vue';
 import Tag from '../components/idx/Tag';
 import Detail from '../components/blog/Detail';
+import ClassificationDetail from '../components/class/classificationdetail';
 
 Vue.use(Router);
 
@@ -31,6 +32,11 @@ export default new Router({
           name: 'classification',
           path: '/classification',
           component: Classification
+        },
+        {
+          name: 'classificationdetail',
+          path: '/classification/:id',
+          component: ClassificationDetail
         },
         {
           name: 'archive',

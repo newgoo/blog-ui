@@ -5,7 +5,7 @@
       热门文章
     </p>
     <ul>
-      <li v-for="blog in HotList">
+      <li v-for="blog in HotList" :key="blog.id">
         <router-link :to="{name:'detail',params:{id: blog.id}}">
           {{blog.title}}
         </router-link>
@@ -41,6 +41,7 @@ export default {
   mounted() {
     this.$store.dispatch('GetHotlistAPI').catch((error) => {
       console.log(error);
+      return error;
     });
   },
   methods: {

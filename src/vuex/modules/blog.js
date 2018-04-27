@@ -1,5 +1,6 @@
 import { get } from '../../util/rest';
 import { formatString } from '../../util/string-utils';
+import API from '../../util/api';
 
 const state = {
   blogList: {},
@@ -34,8 +35,8 @@ const mutations = {
 const actions = {
   GetBlogListAPI({ commit }) {
     return new Promise((resolve, reject) => {
-      let url = '/blog/list';
-      get(url).then((response) => {
+      // let url = '/blog/list';
+      get(API.BlogList).then((response) => {
         commit('SetBlogList', response.body.body.data);
         commit('SetBlogCount', response.body.body.count);
         resolve();
@@ -46,9 +47,9 @@ const actions = {
   },
   SetOneBlog({ commit }, id) {
     return new Promise((resolve, reject) => {
-      let url = '/blog/detail?id=$1';
-      url = formatString(url, id);
-      get(url).then((response) => {
+      // let url = '/blog/detail?id=$1';
+      // url = formatString(url, id);
+      get(formatString(API.OneBlog, id)).then((response) => {
         commit('SetBlogDetail', response.body.body.data);
         resolve();
       }).catch((error) => {

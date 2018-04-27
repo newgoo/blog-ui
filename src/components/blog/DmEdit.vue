@@ -9,10 +9,13 @@ export default {
     VmMarkdown
   },
   methods: {
-    showHtml (data) {
+    showHtml(data) {
       console.log(data)
     }
   }
 }
 </script>
 
+<style scoped>
+
+</style>

@@ -30,7 +30,10 @@ export default {
     'vue-markdown': VueMarkdown
   },
   mounted() {
-    this.$store.dispatch('SetOneBlog', this.$route.params.id);
+    this.$store.dispatch('SetOneBlog', this.$route.params.id).catch((error) => {
+      console.error(error);
+      return error;
+    });
     this.blog = this.$store.getters.getBlogDetail;
   },
   computed: {
