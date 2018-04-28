@@ -9,7 +9,7 @@
     <!-- <div class="list-group-item active" style="margin-left: 5px;margin-right: 5px"> -->
     <div class="list-group-item" style="margin-left: 5px;margin-right: 5px">
       <router-link :to="{name:'classificationdetail',params:{id: BClass.id}}">
-        <h4 class="list-group-item-heading" style="height:19px">{{BClass.class}}<span class="badge">sdfas</span></h4>
+        <h4 class="list-group-item-heading" style="height:19px">{{BClass.class}}<span class="badge"></span></h4>
         <div class="list-group-item-text" style="height:36px">{{BClass.description}}</div>
       </router-link>
     </div>

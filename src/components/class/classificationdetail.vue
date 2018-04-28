@@ -3,12 +3,12 @@
   <div>title</div>
   <div>
     <ul class="list-group">
-      <li class="list-group-item">
-        <span class="badge">14</span> Cras justo odio
-      </li>
-      <li class="list-group-item">
-        <span class="badge">14</span> Cras justo odio
-      </li>
+      <div class="list-group-item" v-for="blog in BlogList" :key="blog.id">
+          <span class="badge">{{blog.views}}</span>
+          <router-link :to="{name:'detail',params:{id: blog.id}}">
+          {{blog.title}}
+        </router-link>
+      </div>
     </ul>
   </div>
 </div>
@@ -16,7 +16,22 @@
 
 <script>
 export default {
-
+  mounted() {
+    this.$store
+      .dispatch('GetClassBlogListAPI', this.$route.params.id)
+      .catch(error => {
+        console.error(error);
+        return error;
+      });
+  },
+  computed: {
+    BlogListCount() {
+      return this.$store.getters.GetClassBlogListCount;
+    },
+    BlogList() {
+      return this.$store.getters.GetClassBlogList;
+    }
+  }
 };
 </script>
 

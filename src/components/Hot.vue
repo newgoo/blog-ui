@@ -9,7 +9,7 @@
         <router-link :to="{name:'detail',params:{id: blog.id}}">
           {{blog.title}}
         </router-link>
-        <i class="right">fdas</i>
+        <i class="right"></i>
       </li>
     </ul>
     <!-- <div> -->
