@@ -8,10 +8,10 @@
         <router-link to="/classification">分类</router-link>
       </li>
       <li class="menu">
-        <router-link to="/archive">归档</router-link>
-      </li>
-      <li class="menu">
         <router-link to="/tag">标签</router-link>
+      </li>
+       <li class="menu">
+        <router-link to="/archive">归档</router-link>
       </li>
       <li class="menu">
         <router-link to="/aboutme">关于</router-link>

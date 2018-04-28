@@ -6,13 +6,12 @@
   <br>
   <Row>
     <Col span="8" class="list-group" v-for="BClass in ClassList" :key="BClass.id">
-    <!-- <div class="list-group-item active" style="margin-left: 5px;margin-right: 5px"> -->
-    <div class="list-group-item" style="margin-left: 5px;margin-right: 5px">
-      <router-link :to="{name:'classificationdetail',params:{id: BClass.id}}">
-        <h4 class="list-group-item-heading" style="height:19px">{{BClass.class}}<span class="badge"></span></h4>
-        <div class="list-group-item-text" style="height:36px">{{BClass.description}}</div>
-      </router-link>
-    </div>
+      <div class="list-group-item" style="margin-left: 5px;margin-right: 5px">
+        <router-link :to="{name:'classificationdetail',params:{id: BClass.id}}">
+          <h4 class="list-group-item-heading" style="height:19px">{{BClass.class}}<span class="badge"></span></h4>
+          <div class="list-group-item-text" style="height:36px">{{BClass.description}}</div>
+        </router-link>
+      </div>
     </Col>
   </Row>
 </div>
@@ -26,7 +25,7 @@ export default {
   //   };
   // },
   mounted() {
-    this.$store.dispatch('GetClassListAPI').catch((error) => {
+    this.$store.dispatch('GetClassListAPI').catch(error => {
       console.error(error);
       return error;
     });
