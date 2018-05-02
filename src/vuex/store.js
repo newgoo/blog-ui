@@ -5,6 +5,7 @@ import getters from './getters';
 import { blog } from './modules/blog';
 import { hot } from './modules/hot';
 import { blogclass } from './modules/class';
+import { blogtag } from './modules/tag';
 
 Vue.use(Vuex);
 
@@ -25,6 +26,7 @@ export default new Vuex.Store({
   modules: {
     blog,
     hot,
-    blogclass
+    blogclass,
+    blogtag
   }
 });
