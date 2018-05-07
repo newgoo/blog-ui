@@ -50,7 +50,7 @@ const mutations = {
 };
 
 const actions = {
-  GetTagLsAction({commit}) {
+  GetTagLsAPI({commit}) {
     return new Promise((resolve, reject) => {
       get(API.TagList).then((response) => {
         commit('setTagCount', response.body.body.count);
@@ -61,7 +61,7 @@ const actions = {
       });
     });
   },
-  GetTagBlog({commit}, tagId) {
+  GetTagBlogAPI({commit}, tagId) {
     return new Promise((resolve, reject) => {
       get(formatString(API.BlogTagList, tagId)).then((response) => {
         commit('setTagBlogCount', response.body.body.count);

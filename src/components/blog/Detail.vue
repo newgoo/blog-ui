@@ -30,7 +30,7 @@ export default {
     'vue-markdown': VueMarkdown
   },
   mounted() {
-    this.$store.dispatch('SetOneBlog', this.$route.params.id).catch((error) => {
+    this.$store.dispatch('GetOneBlogAPi', this.$route.params.id).catch((error) => {
       console.error(error);
       return error;
     });
@@ -50,11 +50,11 @@ export default {
   },
   watch: {
     '$route'(to, from) {
-      this.$store.dispatch('SetOneBlog', to.params.id);
+      this.$store.dispatch('GetOneBlogAPi', to.params.id);
     }
   }
   // activated() {
-  //   this.$store.dispatch('SetOneBlog', this.$route.params.id);
+  //   this.$store.dispatch('GetOneBlogAPi', this.$route.params.id);
   // }
 };
 </script>

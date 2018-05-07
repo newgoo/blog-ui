@@ -18,7 +18,7 @@ const mutations = {
 };
 
 const actions = {
-  GetHotlistAPI({ commit }) {
+  GetHotListAPI({ commit }) {
     return new Promise((resolve, reject) => {
       get(API.HotList).then((response) => {
         commit('SetHotList', response.body.body.data);

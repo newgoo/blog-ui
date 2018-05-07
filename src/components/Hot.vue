@@ -39,14 +39,14 @@ export default {
     };
   },
   mounted() {
-    this.$store.dispatch('GetHotlistAPI').catch((error) => {
+    this.$store.dispatch('GetHotListAPI').catch((error) => {
       console.log(error);
       return error;
     });
   },
   methods: {
     // RefreshBlog(id) {
-    //   this.$store.dispatch('SetOneBlog', id);
+    //   this.$store.dispatch('GetOneBlogAPi', id);
     // }
   },
   computed: {

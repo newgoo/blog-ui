@@ -2,10 +2,11 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import actions from './actions';
 import getters from './getters';
-import { blog } from './modules/blog';
-import { hot } from './modules/hot';
-import { blogclass } from './modules/class';
-import { blogtag } from './modules/tag';
+import {blog} from './modules/blog';
+import {hot} from './modules/hot';
+import {blogclass} from './modules/class';
+import {blogtag} from './modules/tag';
+import {timeline} from './modules/timeline';
 
 Vue.use(Vuex);
 
@@ -27,6 +28,7 @@ export default new Vuex.Store({
     blog,
     hot,
     blogclass,
-    blogtag
+    blogtag,
+    timeline
   }
 });

@@ -7,5 +7,7 @@ export default {
   TagList: '/blog/tag/list',
   BlogTagList: '/blog/tag/blog?tag_id=$1',
 
-  HotList: '/blog/hot'
+  HotList: '/blog/hot',
+
+  TimeLine: '/blog/time/line'
 };

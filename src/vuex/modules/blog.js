@@ -45,7 +45,7 @@ const actions = {
       });
     });
   },
-  SetOneBlog({ commit }, id) {
+  GetOneBlogAPi({ commit }, id) {
     return new Promise((resolve, reject) => {
       // let url = '/blog/detail?id=$1';
       // url = formatString(url, id);

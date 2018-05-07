@@ -15,7 +15,7 @@
 <script>
   export default {
     mounted() {
-      this.$store.dispatch('GetTagLsAction').catch(error => {
+      this.$store.dispatch('GetTagLsAPI').catch(error => {
         console.error(error);
         return error;
       });

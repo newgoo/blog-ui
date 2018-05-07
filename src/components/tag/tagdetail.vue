@@ -12,7 +12,7 @@
   export default {
     name: 'tagdetail',
     mounted() {
-      this.$store.dispatch('GetTagBlog', this.$route.params.id).catch((error) => {
+      this.$store.dispatch('GetTagBlogAPI', this.$route.params.id).catch((error) => {
         console.error(error);
         return error;
       });
@@ -27,7 +27,7 @@
     },
     watch: {
       '$route'(to, from) {
-        this.$store.dispatch('GetTagBlog', to.params.id);
+        this.$store.dispatch('GetTagBlogAPI', to.params.id);
       }
     }
   };
