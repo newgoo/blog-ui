@@ -4,11 +4,12 @@ import Dashboard from '../pages/Dashboard.vue';
 
 import Idx from '../components/idx/Index.vue';
 import Classification from '../components/idx/Classification.vue';
+import ClassificationDetail from '../components/class/classificationdetail';
+import Tag from '../components/idx/Tag';
+import TagDetail from '../components/tag/tagdetail';
 import AboutMe from '../components/idx/AboutMe.vue';
 import Archive from '../components/idx/Archive.vue';
-import Tag from '../components/idx/Tag';
 import Detail from '../components/blog/Detail';
-import ClassificationDetail from '../components/class/classificationdetail';
 
 Vue.use(Router);
 
@@ -39,6 +40,16 @@ export default new Router({
           component: ClassificationDetail
         },
         {
+          name: 'tag',
+          path: '/tag',
+          component: Tag
+        },
+        {
+          name: 'tagdetail',
+          path: '/tag/:id',
+          component: TagDetail
+        },
+        {
           name: 'archive',
           path: '/archive',
           component: Archive
@@ -47,11 +58,6 @@ export default new Router({
           name: 'aboutme',
           path: '/aboutme',
           component: AboutMe
-        },
-        {
-          name: 'tag',
-          path: '/tag',
-          component: Tag
         }
       ]
     }

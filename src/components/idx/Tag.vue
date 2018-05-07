@@ -3,8 +3,10 @@
     <title>title</title>
     <div>
       <div v-for="tag in TagList" :key="tag.id">
-        <Button v-if="getNum(tag.id)" type="info">Info</Button>
-        <Button v-else type="success">Success</Button>
+        <router-link :to="{name:'tagdetail',params:{id: tag.id}}">
+          <Button v-if="getNum(tag.id)" type="info">{{tag.tag}}</Button>
+          <Button v-else type="success">{{tag.tag}}</Button>
+        </router-link>
       </div>
     </div>
   </div>
@@ -13,7 +15,7 @@
 <script>
   export default {
     mounted() {
-      this.$store.dispatch('GetClassLs').catch(error => {
+      this.$store.dispatch('GetTagLsAction').catch(error => {
         console.error(error);
         return error;
       });

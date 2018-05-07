@@ -31,6 +31,11 @@ export default {
     BlogList() {
       return this.$store.getters.GetClassBlogList;
     }
+  },
+  watch: {
+    '$route'(to, from) {
+      this.$store.dispatch('GetClassBlogListAPI', to.params.id);
+    }
   }
 };
 </script>

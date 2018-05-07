@@ -1,6 +1,6 @@
 import API from '../../util/api';
 import {get} from '../../util/rest';
-// import {formatString} from '../../util/string-utils';
+import {formatString} from '../../util/string-utils';
 
 const state = {
   TagList: {},
@@ -50,7 +50,7 @@ const mutations = {
 };
 
 const actions = {
-  GetClassLs({commit}) {
+  GetTagLsAction({commit}) {
     return new Promise((resolve, reject) => {
       get(API.TagList).then((response) => {
         commit('setTagCount', response.body.body.count);
@@ -61,9 +61,9 @@ const actions = {
       });
     });
   },
-  getTagBlog({commit}) {
+  GetTagBlog({commit}, tagId) {
     return new Promise((resolve, reject) => {
-      get(API.BlogTagList).then((response) => {
+      get(formatString(API.BlogTagList, tagId)).then((response) => {
         commit('setTagBlogCount', response.body.body.count);
         commit('setTagBlogLs', response.body.body.data);
         resolve();
