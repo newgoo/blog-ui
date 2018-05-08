@@ -1,12 +1,13 @@
 <template>
   <div>
     <div v-for="year in TimeLine">
-      {{year.year}}
+      <div>{{year.year}}</div>
       <div v-for="blog in year.ylist">
         <router-link :to="{name:'detail',params:{id: blog.id}}">
           {{blog.title}}
         </router-link>
       </div>
+      <br/>
     </div>
   </div>
 </template>
