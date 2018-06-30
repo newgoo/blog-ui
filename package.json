@@ -84,6 +84,7 @@
     "vue-jest": "^1.0.2",
     "vue-loader": "^13.7.1",
     "vue-markdown-highlight": "^1.0.5",
+    "vue-markdown-loader": "^2.4.1",
     "vue-style-loader": "^3.1.2",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^3.11.0",
