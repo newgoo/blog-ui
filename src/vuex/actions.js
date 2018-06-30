@@ -1,5 +1,5 @@
 export default {
-  setView({ commit }, num) {
+  setView({commit}, num) {
     return commit('SetView', num);
   }
 };

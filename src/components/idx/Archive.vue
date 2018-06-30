@@ -32,12 +32,13 @@
 </script>
 
 <style scoped>
-  .year{
+  .year {
     font-weight: bold;
     font-size: 16px;
     height: 25px;
   }
-  .tt{
+
+  .tt {
     text-indent: 20px;
     height: 20px;
   }

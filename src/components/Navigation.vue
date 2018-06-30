@@ -10,7 +10,7 @@
       <li class="menu">
         <router-link to="/tag">标签</router-link>
       </li>
-       <li class="menu">
+      <li class="menu">
         <router-link to="/archive">归档</router-link>
       </li>
       <li class="menu">
@@ -21,9 +21,7 @@
 </template>
 
 <script>
-export default {
-
-};
+  export default {};
 </script>
 
 <style scoped lang="scss">

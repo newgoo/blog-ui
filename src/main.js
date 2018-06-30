@@ -8,7 +8,7 @@ import ElementUI from 'element-ui';
 import iView from 'iview';
 import Vuex from 'vuex';
 import store from './vuex/store';
-import { } from 'highlight.js/styles/default.css';
+import {} from 'highlight.js/styles/default.css';
 // import { } from 'font-awesome/css/font-awesome.css';
 import Highlight from 'vue-markdown-highlight';
 // import VueMarkdown from 'vue-markdown';

@@ -1,4 +1,4 @@
-import { get } from '../../util/rest';
+import {get} from '../../util/rest';
 import API from '../../util/api';
 
 const state = {
@@ -18,7 +18,7 @@ const mutations = {
 };
 
 const actions = {
-  GetHotListAPI({ commit }) {
+  GetHotListAPI({commit}) {
     return new Promise((resolve, reject) => {
       get(API.HotList).then((response) => {
         commit('SetHotList', response.body.body.data);

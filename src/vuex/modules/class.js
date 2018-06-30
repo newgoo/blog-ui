@@ -1,6 +1,6 @@
 import API from '../../util/api';
-import { get } from '../../util/rest';
-import { formatString } from '../../util/string-utils';
+import {get} from '../../util/rest';
+import {formatString} from '../../util/string-utils';
 
 const state = {
   classList: {},
@@ -40,7 +40,7 @@ const mutations = {
 };
 
 const actions = {
-  GetClassListAPI({ commit }) {
+  GetClassListAPI({commit}) {
     return new Promise((resolve, reject) => {
       get(API.ClassList).then((response) => {
         commit('SetClassList', response.body.body.data);
@@ -51,7 +51,7 @@ const actions = {
       });
     });
   },
-  GetClassBlogListAPI({ commit }, classid) {
+  GetClassBlogListAPI({commit}, classid) {
     return new Promise((resolve, reject) => {
       get(formatString(API.BlogClassList, classid)).then((response) => {
         commit('SetClassBlogList', response.body.body.data);

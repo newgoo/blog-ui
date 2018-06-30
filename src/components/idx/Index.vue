@@ -7,30 +7,30 @@
 </template>
 
 <script>
-import BlogSmall from '../template/BlogSmall';
+  import BlogSmall from '../template/BlogSmall';
 
-export default {
-  // data() {
-  //   return {
-  //     blog: { id: 0, title: '', author: '', add_time: 0, content: '', update_time: 0, views: 0, introduce: '' }
-  //   };
-  // },
-  computed: {
-    Data() {
-      return this.$store.getters.getBlogList;
+  export default {
+    // data() {
+    //   return {
+    //     blog: { id: 0, title: '', author: '', add_time: 0, content: '', update_time: 0, views: 0, introduce: '' }
+    //   };
+    // },
+    computed: {
+      Data() {
+        return this.$store.getters.getBlogList;
+      },
+      Count() {
+        return this.$store.getters.getBLogCount;
+      }
     },
-    Count() {
-      return this.$store.getters.getBLogCount;
+    mounted() {
+      this.$store.dispatch('GetBlogListAPI').catch((error) => {
+        console.error(error);
+        return error;
+      });
+    },
+    components: {
+      BlogSmall
     }
-  },
-  mounted() {
-    this.$store.dispatch('GetBlogListAPI').catch((error) => {
-      console.error(error);
-      return error;
-    });
-  },
-  components: {
-    BlogSmall
-  }
-};
+  };
 </script>
