@@ -1,6 +1,8 @@
 <template>
   <div>
-    About me
+    <h2 class="head">
+      About me
+    </h2>
   </div>
 </template>
 

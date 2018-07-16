@@ -1,5 +1,8 @@
 <template>
   <div>
+    <h2 class="head">
+      时间轴
+    </h2>
     <div v-for="year in TimeLine">
       <div class="year">{{year.year}}</div>
       <div v-for="blog in year.ylist" class="tt">

@@ -42,6 +42,7 @@
     }
     ul {
       list-style-type: none;
+      height: 50px;
       padding: 0;
     }
     #toplog {
@@ -54,6 +55,7 @@
       display: inline;
       float: left;
       position: relative;
+      margin-top: 3px;
       img {
         padding: 0;
         margin: 0;
@@ -64,6 +66,7 @@
       background-color: $logo_background_color;
       float: left;
       width: 165px;
+      height: 50px;
     }
     .user-wrapper {
       color: $username_font_color;

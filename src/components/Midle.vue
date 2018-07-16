@@ -1,14 +1,16 @@
 <template>
-  <Row style="min-height: 80vh">
-    <keep-alive>
-      <Col span="18">
-        <router-view class="rtv"></router-view>
+  <div>
+    <Row style="min-height: 80vh">
+      <keep-alive>
+        <Col span="18">
+          <router-view class="rtv"></router-view>
+        </Col>
+      </keep-alive>
+      <Col span="6">
+        <hot class="ht"></hot>
       </Col>
-    </keep-alive>
-    <Col span="6">
-      <hot class="ht"></hot>
-    </Col>
-  </Row>
+    </Row>
+  </div>
 </template>
 
 <script>
