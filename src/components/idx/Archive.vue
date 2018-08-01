@@ -3,15 +3,19 @@
     <h2 class="head">
       时间轴
     </h2>
-    <div v-for="year in TimeLine">
-      <div class="year">{{year.year}}</div>
-      <div v-for="blog in year.ylist" class="tt">
-        <router-link :to="{name:'detail',params:{id: blog.id}}">
-          <i class="fas fa-arrow-circle-right"></i>
-          {{blog.title}}
-        </router-link>
-      </div>
-      <br/>
+    <div>
+      <span>
+        <div v-for="y in TimeLine" id="archives">
+          <h4 class="h4 archive-month">2018年 7月</h4>
+          <ul>
+            <li v-for="d in ls">
+              <span>22日</span>
+              <a>K8s中请求网络链路的分析与总结</a>
+              <span class="read">(74 阅读量)</span>
+            </li>
+          </ul>
+        </div>
+      </span>
     </div>
   </div>
 </template>
@@ -19,6 +23,11 @@
 <script>
   export default {
     name: 'Archive',
+    data() {
+      return {
+        ls: [1, 2, 3]
+      };
+    },
     mounted() {
       this.$store.dispatch('GetTimeLineAPI').catch(error => {
         console.error(error);
@@ -35,15 +44,46 @@
 </script>
 
 <style scoped>
-  .year {
+  .h4 {
+    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
     font-weight: bold;
-    font-size: 16px;
-    height: 25px;
   }
 
-  .tt {
-    text-indent: 20px;
-    height: 20px;
+  .archives-fixed .h4 {
+    padding: 0 10px;
+    font-size: 14px;
+    border-left: 30px solid #ddd;
+    line-height: 1;
+    font-weight: inherit;
   }
 
+  h4.h4.archive-month {
+  }
+
+  ul {
+    margin: 20px;
+    padding-left: 20px;
+    list-style: square;
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+
+  #archives a {
+    margin-left: 20px;
+  }
+
+  #archives li {
+    line-height: 36px;
+    font-size: 14px;
+  }
+
+  #archives .read {
+    float: right;
+  }
 </style>

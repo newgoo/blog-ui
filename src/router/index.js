@@ -23,38 +23,35 @@ export default new Router({
           name: 'index',
           path: '/',
           component: Idx
-        },
-        {
+        }, {
           name: 'detail',
           path: 'blog/:id',
           component: Detail
-        },
-        {
+        }, {
           name: 'classification',
           path: '/classification',
           component: Classification
-        },
-        {
+        }, {
           name: 'classificationdetail',
           path: '/classification/:id',
           component: ClassificationDetail
-        },
-        {
+        }, {
           name: 'tag',
           path: '/tag',
           component: Tag
-        },
-        {
+        }, {
           name: 'tagdetail',
           path: '/tag/:id',
           component: TagDetail
-        },
-        {
+        }, {
           name: 'archive',
           path: '/archive',
           component: Archive
-        },
-        {
+        }, {
+          name: 'collection',
+          path: '/connection',
+          component: Archive
+        }, {
           name: 'aboutme',
           path: '/aboutme',
           component: AboutMe

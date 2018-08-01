@@ -4,21 +4,15 @@
       标签
     </h2>
     <div>
-      <!--<div v-for="tag in TagList" :key="tag.id">-->
-      <!--<router-link :to="{name:'tagdetail',params:{id: tag.id}}">-->
-      <!--<Button v-if="getNum(tag.id)" type="info">{{tag.tag}}</Button>-->
-      <!--<Button v-else type="success">{{tag.tag}}</Button>-->
-      <!--</router-link>-->
-      <!--</div>-->
       <div class="archive-tags">
         <ul class="clear">
-          <li class="clear archive-tag-list float-left" v-for="i in list">
+          <li class="archive-tag-list float-left" v-for="i in list">
             <div class="tag-icon  float-left">G</div>
             <div class="tag-con">
               <h3>
                 <a href="/">Golang读书笔记</a>
-                <p>7 篇文章</p>
               </h3>
+              <p>7 篇文章</p>
             </div>
           </li>
         </ul>
@@ -31,7 +25,7 @@
   export default {
     data() {
       return {
-        list: [1, 2, 3, 4, 5, 5, 5]
+        list: [1, 2, 3, 4, 2, 2]
       };
     },
     mounted() {
@@ -62,9 +56,9 @@
   }
 
   .archive-tag-list {
-     width: 18%;
-     margin: 10px 1%;
-   }
+    width: 18%;
+    margin: 10px 1%;
+  }
 
   .tag-icon {
     height: 32px;
@@ -74,17 +68,43 @@
     background: #eee;
     text-align: center;
     line-height: 32px;
-    font-size: 18px;
+    font-size: 14px;
     color: #ccc;
+  }
+
+  .tag-con h3 a {
+    width: 100%;
+    background: #eee;
+    border-radius: 3px;
+    color: #999;
+    font-weight: 400;
+    line-height: 18px;
+    display: inline-block;
+    padding: 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 87px;
+    white-space: nowrap;
+    transition: .3s;
+    font-size: 14px;
+    margin-top: 0;
+  }
+
+  .tag-con h3 {
+    margin: 0;
+    line-height: 14px;
   }
 
   .tag-con {
     margin-left: 36px;
   }
 
-  li {
+  ul li {
     display: list-item;
     text-align: -webkit-match-parent;
+  }
+  p{
+    font-size: 12px;
   }
 
 </style>
