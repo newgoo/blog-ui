@@ -81,6 +81,12 @@
       </p>
     </div>
 
+    <div class="navigation">
+      <div class="align-left"><a href="#">上一页内容</a>
+      </div>
+      <div class="align-right"><a href="#">下一页内容</a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -209,6 +215,35 @@
     text-align: right;
     visibility: visible;
     animation-name: fadeIn;
+  }
+
+  .navigation {
+    color: white;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1.6em;
+    line-height: 30px;
+    .align-left {
+      background: url(http://beike1269-html.demo.smallseashell.com/images/navleft.png) no-repeat top left;
+      float: left;
+      height: 30px;
+      width: 141px;
+      padding-left: 30px;
+      margin: 50px 80px;
+    }
+    .align-right {
+      background: url(http://beike1269-html.demo.smallseashell.com/images/navright.png) no-repeat top left;
+      float: right;
+      height: 30px;
+      width: 141px;
+      padding-left: 30px;
+      margin: 50px 80px;
+    }
+    a {
+      font-size: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
   }
 
 </style>

@@ -30,16 +30,16 @@
 
   .rtv {
     /*height: 300px;*/
-    margin-left: 50px;
+    /*margin-left: 50px;*/
     margin-top: 30px;
-    margin-right: 10px;
+    /*margin-right: 10px;*/
     background-color: aliceblue;
   }
 
   .ht {
-    margin-left: 10px;
+    /*margin-left: 10px;*/
     margin-top: 30px;
-    margin-right: 50px;
+    /*margin-right: 50px;*/
     background-color: #0075a8;
   }
 </style>

@@ -1,7 +1,6 @@
 <template>
-  <div>
+  <div style="margin: 0 18%">
     <navigation></navigation>
-    <!-- <router-view></router-view> -->
     <Midle></Midle>
     <down-gation></down-gation>
   </div>
