@@ -56,19 +56,19 @@
   }
 
   .archive-tag-list {
-    width: 18%;
+    width: 30%;
     margin: 10px 1%;
   }
 
   .tag-icon {
-    height: 32px;
-    width: 32px;
+    height: 50px;
+    width: 50px;
     overflow: hidden;
     border-radius: 3px;
     background: #eee;
     text-align: center;
-    line-height: 32px;
-    font-size: 14px;
+    line-height: 50px;
+    font-size: 25px;
     color: #ccc;
   }
 
@@ -78,16 +78,17 @@
     border-radius: 3px;
     color: #999;
     font-weight: 400;
-    line-height: 18px;
+    line-height: 24px;
     display: inline-block;
     padding: 0 5px;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 87px;
+    max-width: 160px;
     white-space: nowrap;
     transition: .3s;
     font-size: 14px;
-    margin-top: 0;
+    /*margin-top: 0;*/
+    margin-left: 12px;
   }
 
   .tag-con h3 {
@@ -103,8 +104,13 @@
     display: list-item;
     text-align: -webkit-match-parent;
   }
-  p{
-    font-size: 12px;
+
+  p {
+    /*font-size: 16px;*/
+    /*text-align: center;*/
+    font-size: 14px;
+    text-align: center;
+    width: 180px;
   }
 
 </style>

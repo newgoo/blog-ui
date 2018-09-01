@@ -21,7 +21,7 @@ const actions = {
   GetHotListAPI({commit}) {
     return new Promise((resolve, reject) => {
       get(API.HotList).then((response) => {
-        commit('SetHotList', response.body.body.data);
+        // commit('SetHotList', response.body.body.data);
         resolve();
       }).catch((error) => {
         reject(error);

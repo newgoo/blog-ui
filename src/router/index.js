@@ -10,6 +10,7 @@ import TagDetail from '../components/tag/tagdetail';
 import AboutMe from '../components/idx/AboutMe.vue';
 import Archive from '../components/idx/Archive.vue';
 import Detail from '../components/blog/Detail';
+import Collection from '../components/idx/collection';
 
 Vue.use(Router);
 
@@ -50,7 +51,7 @@ export default new Router({
         }, {
           name: 'collection',
           path: '/connection',
-          component: Archive
+          component: Collection
         }, {
           name: 'aboutme',
           path: '/aboutme',

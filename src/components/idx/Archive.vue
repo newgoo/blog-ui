@@ -5,8 +5,8 @@
     </h2>
     <div>
       <span>
-        <div v-for="y in TimeLine" id="archives">
-          <h4 class="h4 archive-month">2018年 7月</h4>
+        <div v-for="y in timeLine" id="archives">
+          <h4 class="h4">2018年 7月</h4>
           <ul>
             <li v-for="d in ls">
               <span>22日</span>
@@ -25,12 +25,12 @@
     name: 'Archive',
     data() {
       return {
-        ls: [1, 2, 3]
+        ls: [1, 2, 3],
+        timeLine: [2018, 2017, 2016]
       };
     },
     mounted() {
       this.$store.dispatch('GetTimeLineAPI').catch(error => {
-        console.error(error);
         return error;
       });
     },
@@ -61,8 +61,8 @@
     font-weight: inherit;
   }
 
-  h4.h4.archive-month {
-  }
+  /*h4.h4.archive-month {*/
+  /*}*/
 
   ul {
     margin: 20px;

@@ -24,7 +24,6 @@ const actions = {
         commit('setTimeLine', response.body.body.data);
         resolve();
       }).catch((error) => {
-        console.error(error);
         reject(error);
       });
     });
