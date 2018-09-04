@@ -9,7 +9,7 @@
           <div class="tag-icon  float-left">G</div>
           <div class="tag-con">
             <h3>
-              <a href="/">Golang读书笔读书笔读书笔记</a>
+              <router-link :to="{name:'tagdetail',params:{id: '1'}}">Golang读书笔读书笔读书笔记</router-link>
             </h3>
             <p>7 篇文章</p>
           </div>

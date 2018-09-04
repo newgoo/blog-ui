@@ -2,16 +2,20 @@
   <div>
     <div style="background:#eee;padding: 20px">
       <Card :bordered="false" class="ct">
-        <!--<div slot="title" style="height:40px">-->
-        <!--<p class="tit">{{BlogDetail.title}}</p>-->
-        <!--<i class="layer">{{formateDate(blog.add_time)}}</i>-->
-        <!--<i></i>-->
-        <!--<i class="layer">{{blog.author}}</i>-->
-        <!--<i class="fa fa-eye" aria-hidden="true"></i>-->
-        <!--<i>{{blog.views}}</i>-->
-        <!--</div>-->
+        <h3>goruntime的调度底层实现</h3>
+        <br/>
+        <div>
+          <span class="layer">2018-09-04 13:12:11</span>
+          <span>标签:
+            <a class="tag">golang</a>
+            <a class="tag">底层</a>
+          </span>
+          <span>阅读(10)</span>
+        </div>
+        <hr/>
         <vue-markdown v-highlight :source="s" class="md-detail markdown"></vue-markdown>
       </Card>
+      <div class="announce">未经允许不得转载</div>
     </div>
   </div>
 </template>
@@ -213,12 +217,12 @@ docker run --restart=always --name mysql2 -v /data1/mysql/conf/:/etc/mysql/  -v 
 </script>
 
 <style lang="scss" scoped>
-  .ct {
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
+  /*.ct {*/
+  /*padding-left: 5%;*/
+  /*padding-right: 5%;*/
+  /*padding-top: 20px;*/
+  /*padding-bottom: 20px;*/
+  /*}*/
 
   .tit {
     font-size: 20px;
@@ -229,9 +233,33 @@ docker run --restart=always --name mysql2 -v /data1/mysql/conf/:/etc/mysql/  -v 
     width: 50px;
   }
 
-  .md-detail {
-    line-height: 1.8;
-    font-size: 12px;
+  .tag {
+    font-size: 14px;
+    font-weight: 600;
   }
+
+  /*.md-detail {*/
+  /*line-height: 1.8;*/
+  /*font-size: 12px;*/
+  /*}*/
+  .announce {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #337ab7;
+    word-wrap: normal;
+    word-break: break-word !important;
+    word-break: break-all;
+    white-space: pre;
+    overflow: auto;
+    border-radius: 0;
+    background: #f6f6f6;
+    -webkit-text-size-adjust: none;
+    display: block;
+    line-height: 1.5;
+    border: 1px solid #DADADA;
+  }
+
 </style>
 

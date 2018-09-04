@@ -43,10 +43,6 @@
   }
 
   .classification {
-    /*a {*/
-    /*font-size: 14px;*/
-    /*margin-left: 20px;*/
-    /*}*/
     .line {
       font-size: 14px;
       margin-left: 20px;
@@ -58,6 +54,10 @@
       list-style: bengali;
       line-height: 30px;
       font-size: 14px;
+      a{
+        font-size: 14px;
+        font-weight: 600;
+      }
     }
   }
 

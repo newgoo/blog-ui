@@ -6,11 +6,11 @@
     <div class="archive-classify">
       <ul class="clear">
         <li class="float-left archive-classify-list" v-for="l in list">
-          <a href="/" class="tag-name">Golang</a>
+          <router-link :to="{name:'classificationdetail',params:{id: '1'}}" class="tag-name">Golang</router-link>
           <br/>
           <span>2018-04-18</span>
           <br/>
-          <a class="spot">微信开发中一些经典的坑总结(持续更新)</a>
+          <router-link :to="{name:'classificationdetail',params:{id: '1'}}" class="spot">微信开发中一些经典的坑总结(持续更新)</router-link>
         </li>
       </ul>
     </div>

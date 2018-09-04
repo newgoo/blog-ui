@@ -5,7 +5,7 @@
       <ul class="list-group">
         <div class="list-group-item" v-for="blog in BlogList" :key="blog.id">
           <span class="badge">{{blog.views}}</span>
-          <router-link :to="{name:'detail',params:{id: blog.id}}">
+          <router-link :to="{name:'detail',params:{id: 1}}">
             {{blog.title}}
           </router-link>
         </div>

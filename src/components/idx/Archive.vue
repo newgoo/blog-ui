@@ -80,6 +80,7 @@
   #archives li {
     line-height: 30px;
     font-size: 14px;
+    font-weight: 600;
   }
 
   #archives .read {

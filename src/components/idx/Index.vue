@@ -7,7 +7,7 @@
       <div class="home-list-li fadeIn s">
         <header>
           <h2>
-            <a>K8s中请求网络链路的分析与总结</a>
+            <router-link :to="{name:'detail',params:{id: '1'}}">K8s中请求网络链路的分析与总结</router-link>
           </h2>
         </header>
         <p class="text-muted views"><span>yulibaozi 发布于 2018/7/22</span></p>
@@ -45,7 +45,7 @@
       <div class="home-list-li fadeIn s s-left">
         <header>
           <h2>
-            <a>K8s中请求网络链路的分析与总结</a>
+            <router-link :to="{name:'detail',params:{id: 1}}">K8s中请求网络链路的分析与总结</router-link>
           </h2>
         </header>
         <p class="text-muted-right views"><span>yulibaozi 发布于 2018/7/22</span></p>
@@ -83,7 +83,7 @@
       <div class="home-list-li fadeIn s">
         <header>
           <h2>
-            <a>K8s中请求网络链路的分析与总结</a>
+            <router-link :to="{name:'detail',params:{id: 1}}">K8s中请求网络链路的分析与总结</router-link>
           </h2>
         </header>
         <p class="text-muted views"><span>yulibaozi 发布于 2018/7/22</span></p>
@@ -121,7 +121,7 @@
       <div class="home-list-li fadeIn s s-left">
         <header>
           <h2>
-            <a>K8s中请求网络链路的分析与总结</a>
+            <router-link :to="{name:'detail',params:{id: 1}}">K8s中请求网络链路的分析与总结</router-link>
           </h2>
         </header>
         <p class="text-muted-right views"><span>yulibaozi 发布于 2018/7/22</span></p>
@@ -169,6 +169,7 @@
 
 <script>
   import BlogSmall from '../template/BlogSmall';
+  import '../../router/index';
 
   export default {
     computed: {
