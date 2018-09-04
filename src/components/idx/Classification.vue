@@ -3,17 +3,6 @@
     <h2 class="head">
       分类信息
     </h2>
-    <br>
-    <!--<Row>-->
-    <!--<Col span="8" class="list-group" v-for="BClass in ClassList" :key="BClass.id">-->
-    <!--<div class="list-group-item" style="margin-left: 5px;margin-right: 5px">-->
-    <!--<router-link :to="{name:'classificationdetail',params:{id: BClass.id}}">-->
-    <!--<h4 class="list-group-item-heading" style="height:19px">{{BClass.class}}<span class="badge"></span></h4>-->
-    <!--<div class="list-group-item-text" style="height:36px">{{BClass.description}}</div>-->
-    <!--</router-link>-->
-    <!--</div>-->
-    <!--</Col>-->
-    <!--</Row>-->
     <div class="archive-classify">
       <ul class="clear">
         <li class="float-left archive-classify-list" v-for="l in list">
@@ -25,7 +14,6 @@
         </li>
       </ul>
     </div>
-
   </div>
 </template>
 
@@ -83,10 +71,12 @@
     display: inline-block;
     margin-right: 5px;
     background-color: #e6e6e6;
-    color: #666;
+    color: teal;
     padding: 2px 7px;
     margin-bottom: 4px;
     transition: .3s;
+    font-size: 14px;
+    font-weight: 500;
   }
 
 </style>

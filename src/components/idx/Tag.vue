@@ -3,20 +3,18 @@
     <h2 class="head">
       标签
     </h2>
-    <div>
-      <div class="archive-tags">
-        <ul class="clear">
-          <li class="archive-tag-list float-left" v-for="i in list">
-            <div class="tag-icon  float-left">G</div>
-            <div class="tag-con">
-              <h3>
-                <a href="/">Golang读书笔记</a>
-              </h3>
-              <p>7 篇文章</p>
-            </div>
-          </li>
-        </ul>
-      </div>
+    <div class="archive-tags">
+      <ul class="clear">
+        <li class="archive-tag-list float-left" v-for="i in list">
+          <div class="tag-icon  float-left">G</div>
+          <div class="tag-con">
+            <h3>
+              <a href="/">Golang读书笔读书笔读书笔记</a>
+            </h3>
+            <p>7 篇文章</p>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -61,13 +59,13 @@
   }
 
   .tag-icon {
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
     overflow: hidden;
     border-radius: 3px;
     background: #eee;
     text-align: center;
-    line-height: 50px;
+    line-height: 35px;
     font-size: 25px;
     color: #ccc;
   }
@@ -76,24 +74,26 @@
     width: 100%;
     background: #eee;
     border-radius: 3px;
-    color: #999;
-    font-weight: 400;
-    line-height: 24px;
+    color: teal;
+    font-weight: 500;
+    line-height: 20px;
     display: inline-block;
     padding: 0 5px;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 160px;
     white-space: nowrap;
+    -webkit-transition: .3s;
     transition: .3s;
     font-size: 14px;
-    /*margin-top: 0;*/
+    /* margin-top: 0; */
     margin-left: 12px;
   }
 
   .tag-con h3 {
     margin: 0;
-    line-height: 14px;
+    line-height: 12px;
+    display: inline-block;
   }
 
   .tag-con {
@@ -106,10 +106,9 @@
   }
 
   p {
-    /*font-size: 16px;*/
-    /*text-align: center;*/
-    font-size: 14px;
-    text-align: center;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 15px;
     width: 180px;
   }
 

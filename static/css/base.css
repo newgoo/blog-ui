@@ -16,24 +16,10 @@
   clear: both;
 }
 
-.clear:after {
-  content: " ";
-  display: block;
-  height: 0;
-  clear: both;
-}
-
 img {
   border: none;
   vertical-align: middle;
 }
-
-/*.clear:after {*/
-  /*content: " ";*/
-  /*display: block;*/
-  /*height: 0;*/
-  /*clear: both;*/
-/*}*/
 
 a {
   color: #606777;

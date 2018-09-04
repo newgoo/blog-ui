@@ -4,18 +4,17 @@
       时间轴
     </h2>
     <div>
-      <span>
-        <div v-for="y in timeLine" id="archives">
-          <h4 class="h4">2018年 7月</h4>
-          <ul>
-            <li v-for="d in ls">
-              <span>22日</span>
-              <a>K8s中请求网络链路的分析与总结</a>
-              <span class="read">(74 阅读量)</span>
-            </li>
-          </ul>
-        </div>
-      </span>
+      <div v-for="y in timeLine" id="archives">
+        <h4 class="h4">2018年 7月</h4>
+        <ul>
+          <li v-for="d in ls">
+            <span>22日</span>
+            <a>K8s中请求网络链路的分析与总结</a>
+            <span class="read">(74 阅读量)</span>
+          </li>
+        </ul>
+        <hr>
+      </div>
     </div>
   </div>
 </template>
@@ -79,7 +78,7 @@
   }
 
   #archives li {
-    line-height: 36px;
+    line-height: 30px;
     font-size: 14px;
   }
 

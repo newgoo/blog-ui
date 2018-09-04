@@ -6,18 +6,17 @@
     <div v-for="l in ls" class="classification">
       <h4 data-v-1c8e9d70="" class="h4">2018年 7月</h4>
       <div class="line">
-        <i class="el-icon-edit"></i>
-        <a
-          href="https://chai2010.gitbooks.io/advanced-go-programming-book/content/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io">
-          golang 高级编程
-        </a>
+        <ul>
+          <li v-for="d in ls" class="li">
+            <a
+              href="https://chai2010.gitbooks.io/advanced-go-programming-book/content/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io">
+              《golang 高级编程》
+            </a>
+            <span>涵盖CGO、Go汇编语言、RPC实现、Web框架实现、分布式系统等高阶主题、Web框架实现、分布式系统等高阶主题、Web框架实现、分布式系统等高阶主题</span>
+          </li>
+        </ul>
       </div>
-      <div class="line">
-        <a
-          href="https://chai2010.gitbooks.io/advanced-go-programming-book/content/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io">
-          golang 高级编程
-        </a>
-      </div>
+      <hr>
     </div>
   </div>
 </template>
@@ -51,6 +50,14 @@
     .line {
       font-size: 14px;
       margin-left: 20px;
+    }
+  }
+
+  ul {
+    .li {
+      list-style: bengali;
+      line-height: 30px;
+      font-size: 14px;
     }
   }
 

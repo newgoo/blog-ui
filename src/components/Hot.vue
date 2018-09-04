@@ -25,6 +25,7 @@
           <li><a href="#">updates</a></li>
           <li><a href="#">web</a></li>
         </ul>
+        <hr>
         <h4>Blogroll</h4>
         <ul class="blogroll">
           <li><a href="#">Documentation</a></li>
@@ -85,29 +86,27 @@
     background: aliceblue;;
     color: #2d2d2d;
     ul, ul.categories, ul.recent_comments, ul.blogroll {
-      font-size: 1.4em;
-      line-height: 2.2em;
+      font-size: 16px;
+      line-height: 30px;
       color: #777;
       list-style: square inside;
     }
      ul, ul.categories, ul.recent_comments, ul.blogroll {
-      font-size: 1.4em;
-      line-height: 2.2em;
+       font-size: 16px;
+       line-height: 30px;
        list-style: square inside;
      }
   }
 
   .container_16 {
     .prefix_1 {
-      padding-left: 60px;
+      padding: 20px 20px 20px 20px;
     }
     .grid_5 {
-      width: 280px;
     }
   }
 
   h4, h5 {
-    margin: 35px 0 20px 10px;
     color: #2d2d2d;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 2.4em;
