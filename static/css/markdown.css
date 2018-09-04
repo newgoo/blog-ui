@@ -1,0 +1,363 @@
+.markdown {
+  word-break: break-word!important;
+  word-break: break-all;
+  line-height: 1.7;
+}
+
+.markdown p {
+  margin: 0 0 25px
+}
+
+.markdown blockquote h1:last-child,
+.markdown blockquote h2:last-child,
+.markdown blockquote h3:last-child,
+.markdown blockquote h4:last-child,
+.markdown blockquote h5:last-child,
+.markdown blockquote h6:last-child,
+.markdown blockquote li:last-child,
+.markdown blockquote ol:last-child,
+.markdown blockquote p:last-child,
+.markdown blockquote ul:last-child {
+  margin-bottom: 0
+}
+
+.markdown .video-package .video-description p {
+  margin: 0
+}
+
+.markdown li p {
+  overflow: visible
+}
+
+.markdown a {
+  color: #539C65
+}
+
+.markdown a:hover {
+  color: #539C65;
+  text-decoration: underline
+}
+
+.markdown a.active,
+.markdown a:active,
+.markdown a:focus {
+  color: #539C65
+}
+
+.markdown a.disabled,
+.markdown a.disabled.active,
+.markdown a.disabled:active,
+.markdown a.disabled:focus,
+.markdown a.disabled:hover,
+.markdown a[disabled],
+.markdown a[disabled].active,
+.markdown a[disabled]:active,
+.markdown a[disabled]:focus,
+.markdown a[disabled]:hover {
+  cursor: not-allowed;
+  color: #f5f5f5
+}
+
+.markdown ol,
+.markdown p,
+.markdown ul {
+  word-break: break-word!important;
+  word-break: break-all
+}
+
+.markdown hr {
+  margin: 0 0 20px;
+  border-top: 1px solid #ddd
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  margin: 0 0 15px;
+  font-weight: 700;
+  line-height: 1.7;
+  text-rendering: optimizelegibility
+}
+
+.markdown h1 {
+  font-size: 24px
+}
+
+.markdown h2 {
+  font-size: 22px
+}
+
+.markdown h3 {
+  font-size: 20px
+}
+
+.markdown h4 {
+  font-size: 18px
+}
+
+.markdown h5 {
+  font-size: 16px
+}
+
+.markdown h6 {
+  font-size: 14px
+}
+
+.markdown img {
+  max-width: 100%
+}
+
+.markdown blockquote {
+  padding: 10px;
+  margin-bottom: 25px;
+  background-color: #f7f7f7;
+  border-left: 6px solid #b4b4b4;
+  word-break: break-word!important;
+  word-break: break-all;
+  font-weight: 400;
+  line-height: 30px
+}
+
+.markdown blockquote p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7
+}
+
+.markdown blockquote .image-package {
+  width: auto;
+  margin-left: 0
+}
+
+.markdown ol,
+.markdown ul {
+  padding: 0;
+  margin-left: 22px;
+  margin-bottom: 20px
+}
+
+.markdown ol li,
+.markdown ul li {
+  margin-bottom: 10px;
+  line-height: 30px
+}
+
+.markdown ol li ol,
+.markdown ol li ul,
+.markdown ul li ol,
+.markdown ul li ul {
+  margin-top: 15px
+}
+
+.markdown ol .image-package,
+.markdown ul .image-package {
+  width: auto!important;
+  margin-left: 0!important
+}
+
+.markdown pre {
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 12px;
+  word-wrap: normal;
+  word-break: break-word!important;
+  word-break: break-all;
+  white-space: pre;
+  overflow: auto;
+  border-radius: 0;
+  background: #f6f6f6;
+  color: #657b83;
+  -webkit-text-size-adjust: none;
+  display: block;
+  margin: 0 0 10px;
+  line-height: 1.5;
+  border: 1px solid #DADADA;
+}
+
+.markdown table {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  border-left: none;
+  word-break: normal
+}
+
+.markdown table tr:nth-of-type(2n) {
+  background-color: hsla(0,0%,71%,.1)
+}
+
+.markdown table thead th {
+  vertical-align: middle;
+  text-align: inherit
+}
+
+.markdown table td,.markdown table th {
+  padding: 8px;
+  border: 1px solid #ddd;
+  line-height: 20px;
+  vertical-align: middle
+}
+
+.markdown table th {
+  font-weight: 700
+}
+
+.markdown table .image-package {
+  width: auto;
+  margin-left: 0
+}
+
+.markdown .image-package .image-container {
+  z-index: 100;
+  position: relative;
+  background-color: #eee;
+  transition: background-color .1s linear;
+  margin: 0 auto
+}
+
+.markdown .image-package .image-container .image-container-fill {
+  z-index: 50
+}
+
+.markdown .image-package .image-container .image-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden
+}
+
+.markdown .image-package .image-container .image-view img.image-loading {
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+  opacity: .3
+}
+
+.markdown .image-package .image-container .image-view img {
+  transition: all .15s linear;
+  z-index: 100;
+  -webkit-filter: blur(0);
+  filter: blur(0);
+  opacity: 1
+}
+
+.markdown .image-package {
+  padding-bottom: 25px;
+  width: 700px;
+  margin-left: -40px;
+  text-align: center
+}
+
+.markdown .image-package img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+  cursor: -webkit-zoom-in;
+  transition: all .25s ease-in-out
+}
+
+.markdown .image-package .image-caption {
+  min-width: 20%;
+  max-width: 80%;
+  min-height: 22px;
+  display: inline-block;
+  padding: 10px;
+  margin: 0 auto;
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 14px;
+  color: #969696;
+  line-height: 1.7
+}
+
+.markdown .image-package .image-caption:empty {
+  display: none
+}
+
+.markdown .video-package {
+  position: relative;
+  margin: -20px auto 20px;
+  text-align: center
+}
+
+.markdown .video-package .video-placeholder-area {
+  position: relative;
+  display: inline-block;
+  height: 110px;
+  padding: 10px;
+  padding-left: 120px;
+  box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  background-color: hsla(0,0%,71%,.1);
+  text-align: left;
+  cursor: pointer
+}
+
+.markdown .video-package .video-placeholder-area:after {
+  content: " ";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: block;
+  width: 110px;
+  height: 110px;
+  background-color: rgba(0,0,0,.3);
+  background-position: 30px;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  transition: all .1s linear
+}
+
+.markdown .video-package .video-placeholder-area:hover:after {
+  background-color: transparent
+}
+
+.markdown .video-package .video-placeholder-area .video-cover {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: block;
+  width: 110px;
+  height: 110px;
+  opacity: .8;
+  transition: opacity .1s linear
+}
+
+.markdown .video-package .video-description {
+  min-width: 20%;
+  min-height: 22px;
+  display: none;
+  padding: 10px;
+  margin: 0 auto;
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 13px;
+  color: #999;
+  line-height: 1.7
+}
+
+.markdown .video-package .video-description:empty {
+  display: none
+}
+
+.markdown .video-package .video-close-button,.markdown .video-package .video-provider-button {
+  text-align: left;
+  font-size: 14px;
+  padding: 0;
+  line-height: 14px;
+  cursor: pointer;
+  transition: opacity .1s linear
+}
+
+.markdown .video-package .video-close-button i,.markdown .video-package .video-provider-button i {
+  position: relative;
+  top: 1px
+}
+
+.markdown .video-package .video-provider-button {
+  float: right
+}
