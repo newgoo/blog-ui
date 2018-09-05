@@ -5,12 +5,13 @@
     </h2>
     <div class="archive-classify">
       <ul class="clear">
-        <li class="float-left archive-classify-list" v-for="l in list">
-          <router-link :to="{name:'classificationdetail',params:{id: '1'}}" class="tag-name">Golang</router-link>
+        <li class="float-left archive-classify-list" v-for="c in ClassList">
+          <router-link :to="{name:'classificationdetail',params:{id: c.id}}" class="tag-name">{{c.class}}</router-link>
           <br/>
-          <span>2018-04-18</span>
+          <span>{{formateDate(c.add_time)}}</span>
           <br/>
-          <router-link :to="{name:'classificationdetail',params:{id: '1'}}" class="spot">微信开发中一些经典的坑总结(持续更新)</router-link>
+          <router-link :to="{name:'classificationdetail',params:{id: c.id}}" class="spot">{{c.description}}
+          </router-link>
         </li>
       </ul>
     </div>
@@ -18,16 +19,11 @@
 </template>
 
 <script>
+  import {dat} from '../../util/date';
+
   export default {
-    // data() {
-    //   return {
-    //     class: { id: 0, class: '', count: 0, description: '', picture: '', add_time: 0 }
-    //   };
-    // },
     data() {
-      return {
-        list: [1, 2, 3, 4, 5, 7, 7, 8, 8, 8]
-      };
+      return {};
     },
     mounted() {
       this.$store.dispatch('GetClassListAPI').catch(error => {
@@ -41,6 +37,12 @@
       },
       ClassCount() {
         return this.$store.getters.GetClasslistCount;
+      }
+    },
+    methods: {
+      formateDate(date) {
+        let dt = new Date(date * 1000);
+        return dat(dt, 'yyyy-MM-dd');
       }
     }
   };

@@ -5,13 +5,13 @@
     </h2>
     <div class="archive-tags">
       <ul class="clear">
-        <li class="archive-tag-list float-left" v-for="i in list">
-          <div class="tag-icon  float-left">G</div>
+        <li class="archive-tag-list float-left" v-for="tag in TagList">
+          <div class="tag-icon  float-left">{{tag.tag[0]}}</div>
           <div class="tag-con">
             <h3>
-              <router-link :to="{name:'tagdetail',params:{id: '1'}}">Golang读书笔读书笔读书笔记</router-link>
+              <router-link :to="{name:'tagdetail',params:{id: tag.id}}">{{tag.tag}}</router-link>
             </h3>
-            <p>7 篇文章</p>
+            <p>{{tag.count}} 篇文章</p>
           </div>
         </li>
       </ul>

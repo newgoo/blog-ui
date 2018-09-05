@@ -4,160 +4,56 @@
     <!--<blog-small :blog="blog"></blog-small>-->
     <!--</div>-->
     <div class="home-list">
-      <div class="home-list-li fadeIn s">
-        <header>
-          <h2>
-            <router-link :to="{name:'detail',params:{id: '1'}}">K8s中请求网络链路的分析与总结</router-link>
-          </h2>
-        </header>
-        <p class="text-muted views"><span>yulibaozi 发布于 2018/7/22</span></p>
-        <p class="focus">
-          <a href="/Article/63" class="">
-            <img title="K8s中请求网络链路的分析与总结"
-                 data-src="http://img02.tooopen.com/images/20160509/tooopen_sy_161967094653.jpg"
-                 src="http://img02.tooopen.com/images/20160509/tooopen_sy_161967094653.jpg" lazy="loaded">
-          </a>
-        </p>
-        <p class="note">
-          k8s中请求网络链路的分析与总结
-
-          前要
-          这篇文章，你能明白那些问题？
-          1. 从集群外部请求的时候，整个请求的走向是怎么样的？
-          2. 在service中port,targetPort和nodePort的区别是什么？
-          3. iptables是怎样工作的？
-          4. 谁来维护了数据的正确性，及时性和稳定性？
-
-          基础知识:
-
-          port指当使用ClusterIP访问这个服务所使用的port
-          target...
-        </p>
-        <p class="text-muted views">
+      <div v-for="d,index in Data">
+        <div class="home-list-li fadeIn s" v-if="index%2===0">
+          <header>
+            <h2>
+              <router-link :to="{name:'detail',params:{id: d.id}}">{{d.title}}</router-link>
+            </h2>
+          </header>
+          <p class="text-muted views"><span>{{d.user_name}} 发布于 {{formateDate(d.add_time)}}</span></p>
+          <p class="focus">
+            <router-link :to="{name:'detail',params:{id: d.id}}" class="">
+              <img :src="d.image" lazy="loaded">
+            </router-link>
+          </p>
+          <p class="note">
+            {{d.introduce}}
+          </p>
+          <p class="text-muted views">
           <span>
-            <img src="http://img02.tooopen.com/images/20160509/tooopen_sy_161967094653.jpg">
+            <img :src="d.avatar">
           </span>
-          <span class="post-views"><i class="iconfont icon-yanjing"></i>阅读(74)</span>
-          <span class="post-comments"><i class="iconfont icon-chat"></i>评论(5)</span>
-        </p>
-      </div>
+            <span class="post-views"><i class="iconfont icon-yanjing"></i>阅读({{d.views}})</span>
+            <span class="post-comments"><i class="iconfont icon-chat"></i>评论(5)</span>
+          </p>
+        </div>
 
-      <div class="home-list-li fadeIn s s-left">
-        <header>
-          <h2>
-            <router-link :to="{name:'detail',params:{id: 1}}">K8s中请求网络链路的分析与总结</router-link>
-          </h2>
-        </header>
-        <p class="text-muted-right views"><span>yulibaozi 发布于 2018/7/22</span></p>
-        <p class="img-left">
-          <a href="/Article/63" class="">
-            <img title="K8s中请求网络链路的分析与总结"
-                 data-src="http://img02.tooopen.com/images/20160509/tooopen_sy_161967094653.jpg"
-                 src="http://img02.tooopen.com/images/20160509/tooopen_sy_161967094653.jpg" lazy="loaded">
-          </a>
-        </p>
-        <p class="note-right">
-          k8s中请求网络链路的分析与总结
-
-          前要
-          这篇文章，你能明白那些问题？
-          1. 从集群外部请求的时候，整个请求的走向是怎么样的？
-          2. 在service中port,targetPort和nodePort的区别是什么？
-          3. iptables是怎样工作的？
-          4. 谁来维护了数据的正确性，及时性和稳定性？
-
-          基础知识:
-
-          port指当使用ClusterIP访问这个服务所使用的port
-          target...
-        </p>
-        <p class="text-muted-right views">
+        <div class="home-list-li fadeIn s s-left" v-else>
+          <header>
+            <h2>
+              <router-link :to="{name:'detail',params:{id: d.id}}">{{d.title}}</router-link>
+            </h2>
+          </header>
+          <p class="text-muted-right views"><span>{{d.user_name}} 发布于 2018/7/22</span></p>
+          <p class="img-left">
+            <router-link :to="{name:'detail',params:{id: d.id}}" class="">
+              <img :src="d.image" lazy="loaded">
+            </router-link>
+          </p>
+          <p class="note-right">
+            {{d.introduce}}
+          </p>
+          <p class="text-muted-right views">
         <span>
-          <img src="http://img02.tooopen.com/images/20160509/tooopen_sy_161967094653.jpg">
+          <img :src="d.avatar">
         </span>
-          <span class="post-views"><i class="iconfont icon-yanjing"></i>阅读(74)</span>
-          <span class="post-comments"><i class="iconfont icon-chat"></i>评论(5)</span>
-        </p>
+            <span class="post-views"><i class="iconfont icon-yanjing"></i>阅读({{d.views}})</span>
+            <span class="post-comments"><i class="iconfont icon-chat"></i>评论(5)</span>
+          </p>
+        </div>
       </div>
-
-      <div class="home-list-li fadeIn s">
-        <header>
-          <h2>
-            <router-link :to="{name:'detail',params:{id: 1}}">K8s中请求网络链路的分析与总结</router-link>
-          </h2>
-        </header>
-        <p class="text-muted views"><span>yulibaozi 发布于 2018/7/22</span></p>
-        <p class="focus">
-          <a href="/Article/63" class="">
-            <img title="K8s中请求网络链路的分析与总结"
-                 data-src="http://img02.tooopen.com/images/20160509/tooopen_sy_161967094653.jpg"
-                 src="http://img02.tooopen.com/images/20160509/tooopen_sy_161967094653.jpg" lazy="loaded">
-          </a>
-        </p>
-        <p class="note">
-          k8s中请求网络链路的分析与总结
-
-          前要
-          这篇文章，你能明白那些问题？
-          1. 从集群外部请求的时候，整个请求的走向是怎么样的？
-          2. 在service中port,targetPort和nodePort的区别是什么？
-          3. iptables是怎样工作的？
-          4. 谁来维护了数据的正确性，及时性和稳定性？
-
-          基础知识:
-
-          port指当使用ClusterIP访问这个服务所使用的port
-          target...
-        </p>
-        <p class="text-muted views">
-          <span>
-            <img src="http://img02.tooopen.com/images/20160509/tooopen_sy_161967094653.jpg">
-          </span>
-          <span class="post-views"><i class="iconfont icon-yanjing"></i>阅读(74)</span>
-          <span class="post-comments"><i class="iconfont icon-chat"></i>评论(5)</span>
-        </p>
-      </div>
-
-      <div class="home-list-li fadeIn s s-left">
-        <header>
-          <h2>
-            <router-link :to="{name:'detail',params:{id: 1}}">K8s中请求网络链路的分析与总结</router-link>
-          </h2>
-        </header>
-        <p class="text-muted-right views"><span>yulibaozi 发布于 2018/7/22</span></p>
-        <p class="img-left">
-          <a href="/Article/63" class="">
-            <img title="K8s中请求网络链路的分析与总结"
-                 data-src="http://img02.tooopen.com/images/20160509/tooopen_sy_161967094653.jpg"
-                 src="http://img02.tooopen.com/images/20160509/tooopen_sy_161967094653.jpg" lazy="loaded">
-          </a>
-        </p>
-        <p class="note-right">
-          k8s中请求网络链路的分析与总结
-
-          前要
-          这篇文章，你能明白那些问题？
-          1. 从集群外部请求的时候，整个请求的走向是怎么样的？
-          2. 在service中port,targetPort和nodePort的区别是什么？
-          3. iptables是怎样工作的？
-          4. 谁来维护了数据的正确性，及时性和稳定性？
-
-          基础知识:
-
-          port指当使用ClusterIP访问这个服务所使用的port
-          target...
-        </p>
-        <p class="text-muted-right views">
-        <span>
-          <img src="http://img02.tooopen.com/images/20160509/tooopen_sy_161967094653.jpg">
-        </span>
-          <span class="post-views"><i class="iconfont icon-yanjing"></i>阅读(74)</span>
-          <span class="post-comments"><i class="iconfont icon-chat"></i>评论(5)</span>
-        </p>
-      </div>
-
     </div>
-
     <div class="navigation">
       <div class="align-left"><a href="#">上一页内容</a>
       </div>
@@ -170,6 +66,7 @@
 <script>
   import BlogSmall from '../template/BlogSmall';
   import '../../router/index';
+  import {dat} from '../../util/date';
 
   export default {
     computed: {
@@ -185,6 +82,12 @@
         console.error(error);
         return error;
       });
+    },
+    methods: {
+      formateDate(date) {
+        let dt = new Date(date * 1000);
+        return dat(dt, 'yyyy-MM-dd');
+      }
     },
     components: {
       BlogSmall
@@ -229,7 +132,7 @@
       }
       .note {
         color: #777;
-        line-height: 1.5;
+        line-height: 90px;
         margin: 6px 160px 10px 0;
         padding-right: 15px;
         word-break: break-all;
@@ -252,6 +155,7 @@
     .note {
       color: #777;
       line-height: 1.5;
+      height: 90px;
       margin: 6px 160px 0 0;
       text-indent: 30px;
       word-break: break-all;
@@ -260,6 +164,7 @@
     .note-right {
       color: #777;
       line-height: 1.5;
+      height: 90px;
       margin: 6px 0 0 160px;
       text-indent: 30px;
       word-break: break-all;
