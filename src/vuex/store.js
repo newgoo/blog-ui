@@ -7,6 +7,7 @@ import {hot} from './modules/hot';
 import {blogclass} from './modules/class';
 import {blogtag} from './modules/tag';
 import {timeline} from './modules/timeline';
+import {collection} from './modules/collection';
 
 Vue.use(Vuex);
 
@@ -29,6 +30,7 @@ export default new Vuex.Store({
     hot,
     blogclass,
     blogtag,
-    timeline
+    timeline,
+    collection
   }
 });

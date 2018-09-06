@@ -3,16 +3,14 @@
     <h2 class="head">
       链接收藏
     </h2>
-    <div v-for="l in ls" class="classification">
-      <h4 data-v-1c8e9d70="" class="h4">2018年 7月</h4>
+    <div v-for="d in Data" class="classification">
+      <h4 data-v-1c8e9d70="" class="h4">{{d.classification}}</h4>
       <div class="line">
         <ul>
-          <li v-for="d in ls" class="li">
+          <li v-for="one in d.list" class="li">
             <a
-              href="https://chai2010.gitbooks.io/advanced-go-programming-book/content/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io">
-              《golang 高级编程》
-            </a>
-            <span>涵盖CGO、Go汇编语言、RPC实现、Web框架实现、分布式系统等高阶主题、Web框架实现、分布式系统等高阶主题、Web框架实现、分布式系统等高阶主题</span>
+              :href="one.url">{{one.title}}</a>
+            <span>{{one.recommend}}</span>
           </li>
         </ul>
       </div>
@@ -28,6 +26,17 @@
       return {
         ls: [1, 2, 1, 1, 1]
       };
+    },
+    computed: {
+      Data() {
+        return this.$store.getters.getCollection;
+      }
+    },
+    mounted() {
+      this.$store.dispatch('GetCollectionListAPI').catch((error) => {
+        console.error(error);
+        return error;
+      });
     }
   };
 </script>
@@ -54,7 +63,7 @@
       list-style: bengali;
       line-height: 30px;
       font-size: 14px;
-      a{
+      a {
         font-size: 14px;
         font-weight: 600;
       }

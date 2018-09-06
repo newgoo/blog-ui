@@ -9,5 +9,7 @@ export default {
 
   HotList: '/blog/hot',
 
-  TimeLine: '/blog/time/line'
+  TimeLine: '/blog/time/line',
+
+  Collection: '/blog/collection/list'
 };
