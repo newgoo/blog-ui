@@ -1,4 +1,4 @@
-import Vue from 'vue';
+// import Vue from 'vue';
 import Router from 'vue-router';
 import Dashboard from '../pages/Dashboard.vue';
 
@@ -12,7 +12,7 @@ import Archive from '../components/idx/Archive.vue';
 import Detail from '../components/blog/Detail';
 import Collection from '../components/idx/collection';
 
-Vue.use(Router);
+// Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -50,7 +50,7 @@ export default new Router({
           component: Archive
         }, {
           name: 'collection',
-          path: '/connection',
+          path: '/collection',
           component: Collection
         }, {
           name: 'aboutme',

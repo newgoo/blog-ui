@@ -14,7 +14,7 @@
         <router-link to="/archive">归档</router-link>
       </li>
       <li class="menu">
-        <router-link to="/connection">收藏</router-link>
+        <router-link to="/collection">收藏</router-link>
       </li>
       <li class="menu">
         <router-link to="/aboutme">关于</router-link>

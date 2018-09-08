@@ -27,14 +27,14 @@
 </template>
 
 <script>
-  import VueMarkdown from 'vue-markdown';
+  // import VueMarkdown from 'vue-markdown';
   import {dat} from '../../util/date';
 
   export default {
     props: ['blog'],
-    components: {
-      'vue-markdown': VueMarkdown
-    },
+    // components: {
+    //   'vue-markdown': VueMarkdown
+    // },
     methods: {
       formateDate(date) {
         let dt = new Date(date * 1000);

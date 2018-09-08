@@ -3,22 +3,20 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import Router from 'vue-router';
-import ElementUI from 'element-ui';
-import iView from 'iview';
-import Vuex from 'vuex';
+// import Router from 'vue-router';
+// import iView from 'iView';
+// import Vuex from 'vuex';
 import store from './vuex/store';
-import Highlight from 'vue-markdown-highlight';
+// import Highlight from 'vue-markdown-highlight';
 import {} from '../static/css/markdown.css';
-import {} from 'highlight.js/styles/github.css';
+import {} from '../static/css/github.css';
 
 Vue.config.productionTip = false;
 
-Vue.use(Router);
-Vue.use(ElementUI);
-Vue.use(iView);
-Vue.use(Vuex);
-Vue.use(Highlight);
+// Vue.use(Router);
+// Vue.use(iView);
+// Vue.use(Vuex);
+// Vue.use(Highlight);
 
 /* eslint-disable no-new */
 new Vue({
@@ -26,6 +24,9 @@ new Vue({
   store,
   router: router,
   template: '<App/>',
+  render (h) {
+    return h('App');
+  },
   components: {
     App
   }
