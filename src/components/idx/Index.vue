@@ -154,12 +154,15 @@
     }
     .note {
       color: #777;
-      line-height: 1.5;
+      line-height: 1.6;
       height: 90px;
       margin: 6px 160px 0 0;
       text-indent: 30px;
       word-break: break-all;
       text-align: justify;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
     }
     .note-right {
       color: #777;

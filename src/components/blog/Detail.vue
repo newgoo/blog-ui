@@ -7,12 +7,12 @@
         <div>
           <span class="layer">{{formateDate(BlogDetail.add_time)}}</span>
           <span>标签:
-            <a class="tag" v-for="one in BlogDetail.classes">{{one}}</a>
-          </span>
+      <a class="tag" v-for="one in BlogDetail.classes">{{one}}</a>
+      </span>
           <span>阅读({{BlogDetail.views}})</span>
         </div>
         <hr/>
-        <vue-markdown v-highlight :source="BlogDetail.content" class="md-detail markdown"></vue-markdown>
+        <vue-markdown v-highlight :source="BlogDetail.content" class="md-detail md"></vue-markdown>
       </div>
       <div class="announce">未经允许不得转载</div>
     </div>
@@ -20,7 +20,8 @@
 </template>
 
 <script>
-  import VueMarkdown from 'vue-markdown';
+  import VueMarkdown from '../../../static/js/vue-markdown/';
+  // import VueMarkdown from 'vue-markdown';
   import {dat} from '../../util/date';
 
   export default {

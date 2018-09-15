@@ -1,116 +1,116 @@
-.markdown {
+.md {
   word-break: break-word!important;
   word-break: break-all;
   line-height: 1.7;
 }
 
-.markdown p {
+.md p {
   margin: 0 0 25px
 }
 
-.markdown blockquote h1:last-child,
-.markdown blockquote h2:last-child,
-.markdown blockquote h3:last-child,
-.markdown blockquote h4:last-child,
-.markdown blockquote h5:last-child,
-.markdown blockquote h6:last-child,
-.markdown blockquote li:last-child,
-.markdown blockquote ol:last-child,
-.markdown blockquote p:last-child,
-.markdown blockquote ul:last-child {
+.md blockquote h1:last-child,
+.md blockquote h2:last-child,
+.md blockquote h3:last-child,
+.md blockquote h4:last-child,
+.md blockquote h5:last-child,
+.md blockquote h6:last-child,
+.md blockquote li:last-child,
+.md blockquote ol:last-child,
+.md blockquote p:last-child,
+.md blockquote ul:last-child {
   margin-bottom: 0
 }
 
-.markdown .video-package .video-description p {
+.md .video-package .video-description p {
   margin: 0
 }
 
-.markdown li p {
+.md li p {
   overflow: visible
 }
 
-.markdown a {
+.md a {
   color: #539C65
 }
 
-.markdown a:hover {
+.md a:hover {
   color: #539C65;
   text-decoration: underline
 }
 
-.markdown a.active,
-.markdown a:active,
-.markdown a:focus {
+.md a.active,
+.md a:active,
+.md a:focus {
   color: #539C65
 }
 
-.markdown a.disabled,
-.markdown a.disabled.active,
-.markdown a.disabled:active,
-.markdown a.disabled:focus,
-.markdown a.disabled:hover,
-.markdown a[disabled],
-.markdown a[disabled].active,
-.markdown a[disabled]:active,
-.markdown a[disabled]:focus,
-.markdown a[disabled]:hover {
+.md a.disabled,
+.md a.disabled.active,
+.md a.disabled:active,
+.md a.disabled:focus,
+.md a.disabled:hover,
+.md a[disabled],
+.md a[disabled].active,
+.md a[disabled]:active,
+.md a[disabled]:focus,
+.md a[disabled]:hover {
   cursor: not-allowed;
   color: #f5f5f5
 }
 
-.markdown ol,
-.markdown p,
-.markdown ul {
+.md ol,
+.md p,
+.md ul {
   word-break: break-word!important;
   word-break: break-all
 }
 
-.markdown hr {
+.md hr {
   margin: 0 0 20px;
   border-top: 1px solid #ddd
 }
 
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
+.md h1,
+.md h2,
+.md h3,
+.md h4,
+.md h5,
+.md h6 {
   margin: 0 0 15px;
   font-weight: 700;
   line-height: 1.7;
   text-rendering: optimizelegibility
 }
 
-.markdown h1 {
+.md h1 {
   font-size: 24px
 }
 
-.markdown h2 {
+.md h2 {
   font-size: 22px
 }
 
-.markdown h3 {
+.md h3 {
   font-size: 20px
 }
 
-.markdown h4 {
+.md h4 {
   font-size: 18px
 }
 
-.markdown h5 {
+.md h5 {
   font-size: 16px
 }
 
-.markdown h6 {
+.md h6 {
   font-size: 14px
 }
 
-.markdown img {
+.md img {
   max-width: 100%
 }
 
-.markdown blockquote {
+.md blockquote {
   padding: 10px;
   margin-bottom: 25px;
   background-color: #f7f7f7;
@@ -121,46 +121,46 @@
   line-height: 30px
 }
 
-.markdown blockquote p {
+.md blockquote p {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7
 }
 
-.markdown blockquote .image-package {
+.md blockquote .image-package {
   width: auto;
   margin-left: 0
 }
 
-.markdown ol,
-.markdown ul {
+.md ol,
+.md ul {
   padding: 0;
   margin-left: 22px;
   margin-bottom: 20px
 }
 
-.markdown ol li,
-.markdown ul li {
+.md ol li,
+.md ul li {
   margin-bottom: 10px;
   /*line-height: 30px;*/
   line-height: 20px;
   list-style-type: georgian;
 }
 
-.markdown ol li ol,
-.markdown ol li ul,
-.markdown ul li ol,
-.markdown ul li ul {
+.md ol li ol,
+.md ol li ul,
+.md ul li ol,
+.md ul li ul {
   margin-top: 15px
 }
 
-.markdown ol .image-package,
-.markdown ul .image-package {
+.md ol .image-package,
+.md ul .image-package {
   width: auto!important;
   margin-left: 0!important
 }
 
-.markdown pre {
+.md pre {
   margin-bottom: 20px;
   padding: 15px;
   font-size: 12px;
@@ -179,7 +179,7 @@
   border: 1px solid #DADADA;
 }
 
-.markdown table {
+.md table {
   width: 100%;
   margin-bottom: 20px;
   border: 1px solid #ddd;
@@ -188,32 +188,32 @@
   word-break: normal
 }
 
-.markdown table tr:nth-of-type(2n) {
+.md table tr:nth-of-type(2n) {
   background-color: hsla(0,0%,71%,.1)
 }
 
-.markdown table thead th {
+.md table thead th {
   vertical-align: middle;
   text-align: inherit
 }
 
-.markdown table td,.markdown table th {
+.md table td,.md table th {
   padding: 8px;
   border: 1px solid #ddd;
   line-height: 20px;
   vertical-align: middle
 }
 
-.markdown table th {
+.md table th {
   font-weight: 700
 }
 
-.markdown table .image-package {
+.md table .image-package {
   width: auto;
   margin-left: 0
 }
 
-.markdown .image-package .image-container {
+.md .image-package .image-container {
   z-index: 100;
   position: relative;
   background-color: #eee;
@@ -221,11 +221,11 @@
   margin: 0 auto
 }
 
-.markdown .image-package .image-container .image-container-fill {
+.md .image-package .image-container .image-container-fill {
   z-index: 50
 }
 
-.markdown .image-package .image-container .image-view {
+.md .image-package .image-container .image-view {
   position: absolute;
   top: 0;
   left: 0;
@@ -234,13 +234,13 @@
   overflow: hidden
 }
 
-.markdown .image-package .image-container .image-view img.image-loading {
+.md .image-package .image-container .image-view img.image-loading {
   -webkit-filter: blur(4px);
   filter: blur(4px);
   opacity: .3
 }
 
-.markdown .image-package .image-container .image-view img {
+.md .image-package .image-container .image-view img {
   transition: all .15s linear;
   z-index: 100;
   -webkit-filter: blur(0);
@@ -248,14 +248,14 @@
   opacity: 1
 }
 
-.markdown .image-package {
+.md .image-package {
   padding-bottom: 25px;
   width: 700px;
   margin-left: -40px;
   text-align: center
 }
 
-.markdown .image-package img {
+.md .image-package img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
@@ -264,7 +264,7 @@
   transition: all .25s ease-in-out
 }
 
-.markdown .image-package .image-caption {
+.md .image-package .image-caption {
   min-width: 20%;
   max-width: 80%;
   min-height: 22px;
@@ -277,17 +277,17 @@
   line-height: 1.7
 }
 
-.markdown .image-package .image-caption:empty {
+.md .image-package .image-caption:empty {
   display: none
 }
 
-.markdown .video-package {
+.md .video-package {
   position: relative;
   margin: -20px auto 20px;
   text-align: center
 }
 
-.markdown .video-package .video-placeholder-area {
+.md .video-package .video-placeholder-area {
   position: relative;
   display: inline-block;
   height: 110px;
@@ -300,7 +300,7 @@
   cursor: pointer
 }
 
-.markdown .video-package .video-placeholder-area:after {
+.md .video-package .video-placeholder-area:after {
   content: " ";
   position: absolute;
   top: -1px;
@@ -315,11 +315,11 @@
   transition: all .1s linear
 }
 
-.markdown .video-package .video-placeholder-area:hover:after {
+.md .video-package .video-placeholder-area:hover:after {
   background-color: transparent
 }
 
-.markdown .video-package .video-placeholder-area .video-cover {
+.md .video-package .video-placeholder-area .video-cover {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -330,7 +330,7 @@
   transition: opacity .1s linear
 }
 
-.markdown .video-package .video-description {
+.md .video-package .video-description {
   min-width: 20%;
   min-height: 22px;
   display: none;
@@ -342,11 +342,11 @@
   line-height: 1.7
 }
 
-.markdown .video-package .video-description:empty {
+.md .video-package .video-description:empty {
   display: none
 }
 
-.markdown .video-package .video-close-button,.markdown .video-package .video-provider-button {
+.md .video-package .video-close-button,.md .video-package .video-provider-button {
   text-align: left;
   font-size: 14px;
   padding: 0;
@@ -355,11 +355,11 @@
   transition: opacity .1s linear
 }
 
-.markdown .video-package .video-close-button i,.markdown .video-package .video-provider-button i {
+.md .video-package .video-close-button i,.md .video-package .video-provider-button i {
   position: relative;
   top: 1px
 }
 
-.markdown .video-package .video-provider-button {
+.md .video-package .video-provider-button {
   float: right
 }

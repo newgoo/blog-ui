@@ -37,7 +37,10 @@ module.exports = {
     'vue-router': 'VueRouter',
     'vuex': 'Vuex',
     'superagent': 'superagent',
-    // 'vue-markdown': 'vueMarkdown'
+    'highlight.js': 'highlight.js',
+    // 'vue-markdown': 'vue-markdown',
+    // 'markdown-it': 'markdown-it',
+    // 'markdown-it-emoji': 'markdown-it-emoji'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
