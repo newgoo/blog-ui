@@ -1,6 +1,10 @@
 <template>
   <div>
-    <a class="tag-title">分类</a>
+    <!--<a class="tag-title">分类</a>-->
+    <h2 class="head">
+      分类信息
+    </h2>
+    <router-link to="/classification">分类</router-link>
     >
     <a class="tag-title">golang</a>
     <hr class="hr">

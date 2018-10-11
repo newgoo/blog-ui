@@ -35,7 +35,7 @@
               <router-link :to="{name:'detail',params:{id: d.id}}">{{d.title}}</router-link>
             </h2>
           </header>
-          <p class="text-muted-right views"><span>{{d.user_name}} 发布于 2018/7/22</span></p>
+          <p class="text-muted-right views"><span>{{d.user_name}} 发布于 {{formateDate(d.add_time)}}</span></p>
           <p class="img-left">
             <router-link :to="{name:'detail',params:{id: d.id}}" class="">
               <img :src="d.image" lazy="loaded">
@@ -210,7 +210,7 @@
     font-size: 1.6em;
     line-height: 30px;
     .align-left {
-      background: url(http://beike1269-html.demo.smallseashell.com/images/navleft.png) no-repeat top left;
+      /*background: url(http://beike1269-html.demo.smallseashell.com/images/navleft.png) no-repeat top left;*/
       float: left;
       height: 30px;
       width: 141px;
@@ -218,7 +218,7 @@
       margin: 50px 80px;
     }
     .align-right {
-      background: url(http://beike1269-html.demo.smallseashell.com/images/navright.png) no-repeat top left;
+      /*background: url(http://beike1269-html.demo.smallseashell.com/images/navright.png) no-repeat top left;*/
       float: right;
       height: 30px;
       width: 141px;

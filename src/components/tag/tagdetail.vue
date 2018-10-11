@@ -3,7 +3,11 @@
     <!--<div v-for="blog in BlogLsByTag" :key="blog.id">-->
     <!--<blog-small :blog="blog"></blog-small>-->
     <!--</div>-->
-    <a class="tag-title">标签</a>
+    <h2 class="head">
+      标签
+    </h2>
+    <!--<a class="tag-title">标签</a>-->
+    <router-link to="/tag">标签</router-link>
     >
     <a class="tag-title">golang</a>
     <hr class="hr">
